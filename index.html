@@ -3,27 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <title>odin-rock-paper-scissors</title>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-        }
-
-        .background {
-            background-image: url('./backgroundimage.png'); 
-            background-size: cover; 
-            background-position: center; 
-            background-repeat: no-repeat; 
-            height: 100vh; 
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: rgb(162, 0, 0); 
-        }
-    </style>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body class="background">
+
+<!-- This is where the user score will be updated-->
+    <div id="userScoreContainer">
+        <p> Your Score</p>
+        <p id ="userScore"></p>
+        <div id="userCharacter">
+            <img id="userCharacterImage" src="./Elements/Characters/2.png">
+        </div>
+    </div>≠
+
+
+<!-- This is where the notifications will go through-->
+<div id="gameConsole">
+    <p id ="gameNotification"></p>
+</div>
+
+
+<!-- This is where the computer score will be updated-->
+<div id="computerScoreContainer">
+    <p> Rival's Score</p>
+    <p id="computerScore"></p>
+    <div id="computerCharacter"></div>
+        <img id="computerCharacterImage" src="./Elements/Characters/1.png">
+    </div>
+</div>
+
+
+
+<button id="rock">
+    <img src="./Elements/Icons/1.png">
+</button>
+
+
+<div class="buttonsContainer">
+    <button id="paper">
+        <img src="./Elements/Icons/2.png">
+    </button>
+    <button id="scissors">
+        <img src="./Elements/Icons/3.png">
+    </button>
+    <button id="restart">Restart</button>
     <script src="./index.js"></script>
+</div>
+    
 </body>
 </html>
