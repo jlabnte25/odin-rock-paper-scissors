@@ -56,16 +56,20 @@ function playRound (userInput) {
     userScoreContainer.textContent = userScore;
     computerScoreContainer.textContent = computerScore;
 
-    if (round === 5) 
+    if (round >= 5) 
        {function getGameWinner(){
             if (userScore > computerScore) {
-                gameNotification.textContent = "You won the game congratulations!";
+                gameNotification.textContent = "You won the game congratulations! Press restart to play again";
             } else if (computerScore > userScore) {
-                gameNotification.textContent = "You lost the game, try again";
+                gameNotification.textContent = "You lost the game, press restart to play again";
             } else {
-                gameNotification.textContent = "It's a tie, nobody wins the game."
+                gameNotification.textContent = "It's a tie, nobody wins the game. Press restart to play again"
             }
-        
+
+            btnRock.disabled = true;
+            btnPaper.disabled = true;
+            btnScissors.disabled = true;
+
         }  getGameWinner();
     }
 }
@@ -76,11 +80,14 @@ function restartGame() {
     userScore = 0;
     computerScore = 0;
     round = 0;
-    gameNotification.textContent = "";
+    gameNotification.textContent = "Choose your peel!";
     userScoreContainer.textContent = userScore;
     computerScoreContainer.textContent = computerScore;
     userCharacterImage.src = "./Elements/Characters/2.png";
     computerCharacterImage.src = "./Elements/Characters/1.png";
+    btnPaper.disabled=false;
+    btnRock.disabled=false;
+    btnScissors.disabled=false;
 }
 
 
@@ -150,6 +157,11 @@ function changeComputerCharacterImage (){
     if (computerScore<userScore && round === 5) {
        userCharacterImage.src = "./Elements/Characters/2.png";
        computerCharacterImage.src = "./Elements/Characters/3.png";
+    }
+
+    if (computerScore===userScore && round === 5){
+        userCharacterImage.src = "./Elements/Characters/4.png";
+        computerCharacterImage.src = "./Elements/Characters/3.png";
     }
 
 }

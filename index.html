@@ -3,52 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <title>odin-rock-paper-scissors</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barriecito&family=DM+Serif+Display:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
 </head>
 <body class="background">
 
-<!-- This is where the user score will be updated-->
-    <div id="userScoreContainer">
-        <p> Your Score</p>
-        <p id ="userScore"></p>
-        <div id="userCharacter">
-            <img id="userCharacterImage" src="./Elements/Characters/2.png">
+<div class = "contentContainer">
+    <div class="consoleContainer">
+        <!-- This is where the user score will be updated-->
+            <div class = "scoreContainer">
+                <div class="scoreCard">
+                    <p> Your Score</p>
+                    <p id ="userScore"></p>
+                </div>
+                <div id="userCharacter">
+                    <img id="userCharacterImage" src="./Elements/Characters/2.png">
+                </div>
+            </div>
+
+
+        <!-- This is where the notifications will go through-->
+        <div class="gameHeader">    
+            <div>
+                <p id="lyrics">Jack and poy! Hale, hale hoy! Sinong matalo, siyang unggoy!</p>
+            </div>
+            <div id="gameConsole">
+                <p id ="gameNotification">Choose your peel!</p>
+            </div>
+        </div>    
+
+        <!-- This is where the computer score will be updated-->
+        <div class="scoreContainer">
+            <div class="scoreCard">
+                <p> Rival's Score</p>
+                <p id="computerScore"></p>
+            </div>
+            <div id="computerCharacter"></div>
+                <img id="computerCharacterImage" src="./Elements/Characters/1.png">
         </div>
-    </div>≠
+    </div>
 
 
-<!-- This is where the notifications will go through-->
-<div id="gameConsole">
-    <p id ="gameNotification"></p>
-</div>
+    <div class = "buttonsContainer">    
+        <div class="controlsContainer">
+            <button id="rock">
+                <img src="./Elements/Icons/1.png">
+            </button>
+            <button id="paper">
+                <img src="./Elements/Icons/2.png">
+            </button>
+            <button id="scissors">
+                <img src="./Elements/Icons/3.png">
+            </button>
+        </div>
 
-
-<!-- This is where the computer score will be updated-->
-<div id="computerScoreContainer">
-    <p> Rival's Score</p>
-    <p id="computerScore"></p>
-    <div id="computerCharacter"></div>
-        <img id="computerCharacterImage" src="./Elements/Characters/1.png">
+        <div class="restartContainer">
+            <button id="restart">
+                <p>Restart</p>
+            </button>
+        </div>
     </div>
 </div>
 
 
 
-<button id="rock">
-    <img src="./Elements/Icons/1.png">
-</button>
 
-
-<div class="buttonsContainer">
-    <button id="paper">
-        <img src="./Elements/Icons/2.png">
-    </button>
-    <button id="scissors">
-        <img src="./Elements/Icons/3.png">
-    </button>
-    <button id="restart">Restart</button>
-    <script src="./index.js"></script>
-</div>
-    
+<script src="./index.js"></script> 
 </body>
 </html>
