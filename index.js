@@ -126,26 +126,26 @@ const userCharacter = document.querySelector("#userCharacterImage");
 const computerCharacter = document.querySelector("#computerCharacterImage");
 
 function changeUserCharacterImage (){
-    if (userScore === 1) {
+    if (computerScore === 1) {
         userCharacterImage.src = "./Elements/Characters/6.png";
-    } else if (userScore === 2){
+    } else if (computerScore === 2){
         userCharacterImage.src = "./Elements/Characters/8.png";    
-    } else if (userScore === 3) {
+    } else if (computerScore === 3) {
         userCharacterImage.src = "./Elements/Characters/10.png";
-    } else if (userScore === 4) {
+    } else if (computerScore === 4) {
         userCharacterImage.src = "./Elements/Characters/12.png";
     }
 
 }
 
 function changeComputerCharacterImage (){
-    if (computerScore === 1) {
+    if (userScore === 1) {
         computerCharacterImage.src = "./Elements/Characters/5.png";
-    } else if (computerScore === 2){
+    } else if (userScore === 2){
         computerCharacterImage.src = "./Elements/Characters/7.png";    
-    } else if (computerScore === 3) {
+    } else if (userScore === 3) {
         computerCharacterImage.src = "./Elements/Characters/9.png";
-    } else if (computerScore === 4) {
+    } else if (userScore === 4) {
         computerCharacterImage.src = "./Elements/Characters/11.png";
     } 
 
@@ -166,7 +166,7 @@ function changeComputerCharacterImage (){
 
 }
 
-
+//Old Code
 /*var hScore = 0;
 var cScore = 0;
 
